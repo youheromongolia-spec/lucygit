@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucy Gray R — Cinematic AI Visuals & Creative Studio</title>
+  <meta
+    name="description"
+    content="Lucy Gray R creates cinematic AI visuals, commercials, music videos, and promo films for artists, brands, and live events."
+  />
+  <meta name="og:title" content="Lucy Gray R — Creative AI Studio" />
+  <meta name="og:description" content="Cinematic AI visuals for artists, brands, and live moments." />
+  <meta name="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --panel: #111111;
+      --text: #f4f1eb;
+      --muted: #b8b1a7;
+      --line: rgba(255,255,255,0.08);
+      --accent: #d8b36a;
+      --accent-2: #6f0f1f;
+      --max: 1280px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+      background: radial-gradient(circle at top, rgba(111,15,31,0.28), transparent 32%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    button { font-family: inherit; cursor: pointer; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    /* Header & Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(10,10,10,0.92);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: opacity 0.3s ease;
+    }
+
+    .brand:hover {
+      opacity: 0.75;
+    }
+
+    .brand-title {
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .brand-sub {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      color: var(--muted);
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 72px 0 40px;
+      animation: fadeInUp 0.8s ease 0.2s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      min-height: 520px;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+      animation: slideInLeft 0.6s ease 0.3s both;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 6vw, 5.8rem);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      font-weight: 800;
+      max-width: 10ch;
+      animation: slideInLeft 0.6s ease 0.4s both;
+    }
+
+    .hero-copy p {
+      margin: 0;
+      max-width: 58ch;
+      font-size: 1.05rem;
+      color: var(--muted);
+      animation: slideInLeft 0.6s ease 0.5s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 10px;
+      animation: slideInLeft 0.6s ease 0.6s both;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 22px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(216,179,106,0.22), rgba(111,15,31,0.34));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      border-color: rgba(216,179,106,0.55);
+      color: var(--accent);
+    }
+
+    .button.primary::before {
+      opacity: 1;
+    }
+
+    .button.primary {
+      background: linear-gradient(135deg, rgba(216,179,106,0.22), rgba(111,15,31,0.34));
+    }
+
+    .button.primary:hover {
+      background: linear-gradient(135deg, rgba(216,179,106,0.35), rgba(111,15,31,0.5));
+    }
+
+    /* Hero Media */
+    .hero-media {
+      position: relative;
+      min-height: 520px;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)),
+        radial-gradient(circle at 50% 22%, rgba(255,244,212,0.18), transparent 22%),
+        radial-gradient(circle at 50% 50%, rgba(216,179,106,0.15), transparent 28%),
+        linear-gradient(145deg, #0f0f10, #190c10 52%, #090909 100%);
+      animation: slideInRight 0.8s ease 0.4s both;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .hero-media::before,
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: auto;
+      border-radius: 999px;
+      filter: blur(0.4px);
+    }
+
+    .hero-media::before {
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(255,239,204,0.82), rgba(216,179,106,0.08) 55%, transparent 72%);
+      top: 16%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-20px); }
+    }
+
+    .hero-media::after {
+      width: 1px;
+      height: 74%;
+      top: 14%;
+      left: 50%;
+      background: linear-gradient(180deg, rgba(255,246,219,0.95), rgba(255,246,219,0.06));
+      box-shadow: 0 0 22px rgba(255,244,210,0.45);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.38));
+    }
+
+    .hero-caption {
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    .hero-caption strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .hero-caption span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .play-badge {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.18);
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.05);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      flex: 0 0 auto;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .play-badge:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(216,179,106,0.55);
+      transform: scale(1.1);
+    }
+
+    .play-badge::before {
+      content: "";
+      margin-left: 4px;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 14px solid var(--text);
+      transition: border-left-color 0.3s ease;
+    }
+
+    .play-badge:hover::before {
+      border-left-color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: 48px 0 48px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+      letter-spacing: -0.03em;
+      font-weight: 700;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 52ch;
+    }
+
+    /* Work Grid */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .span-7 { grid-column: span 7; }
+    .span-5 { grid-column: span 5; }
+    .span-4 { grid-column: span 4; }
+    .span-8 { grid-column: span 8; }
+
+    .project-card:hover {
+      border-color: rgba(216,179,106,0.4);
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.4);
+    }
+
+    .project-visual {
+      width: 100%;
+      height: 280px;
+      background: linear-gradient(135deg, rgba(216,179,106,0.1), rgba(111,15,31,0.2));
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--muted);
+      font-weight: 300;
+      transition: all 0.4s ease;
+    }
+
+    .span-8 .project-visual { height: 360px; }
+    .span-7 .project-visual { height: 300px; }
+
+    .project-card:hover .project-visual {
+      background: linear-gradient(135deg, rgba(216,179,106,0.2), rgba(111,15,31,0.3));
+      transform: scale(1.05);
+    }
+
+    .project-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.1), transparent);
+      pointer-events: none;
+    }
+
+    .project-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .project-meta {
+      font-size: 0.78rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    .project-card h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      flex: 1;
+    }
+
+    /* Statement */
+    .statement {
+      background: linear-gradient(135deg, rgba(216,179,106,0.08), rgba(111,15,31,0.12));
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 60px 0;
+      margin: 48px 0;
+    }
+
+    .statement-box {
+      max-width: 800px;
+    }
+
+    .statement-box h2 {
+      margin: 0 0 24px;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .statement-box p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .panel {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.01), rgba(111,15,31,0.05));
+      transition: all 0.3s ease;
+    }
+
+    .panel:hover {
+      border-color: rgba(216,179,106,0.3);
+      background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(111,15,31,0.1));
+    }
+
+    .panel h3 {
+      margin: 0 0 16px;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .panel p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .contact-note {
+      font-size: 0.9rem;
+      margin-top: 16px;
+    }
+
+    .capabilities {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .capabilities li {
+      color: var(--muted);
+      padding-left: 20px;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    .capabilities li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Contact CTA */
+    .contact-cta {
+      background: linear-gradient(135deg, rgba(216,179,106,0.12), rgba(111,15,31,0.18));
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      margin: 48px 0;
+    }
+
+    .cta-box {
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .cta-box h2 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .cta-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* Contact Form */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .field input,
+    .field textarea {
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      outline: none;
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(216,179,106,0.5);
+      box-shadow: 0 0 0 3px rgba(216,179,106,0.1);
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-status {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    .form-status.success {
+      background: rgba(76,175,80,0.15);
+      color: #4caf50;
+      border: 1px solid rgba(76,175,80,0.3);
+      display: block;
+    }
+
+    .form-status.error {
+      background: rgba(244,67,54,0.15);
+      color: #f44336;
+      border: 1px solid rgba(244,67,54,0.3);
+      display: block;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-media { min-height: 420px; }
+
+      .span-7,
+      .span-5,
+      .span-4,
+      .span-8 {
+        grid-column: span 12;
+      }
+
+      .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        align-items: flex-start;
+        padding: 16px 0;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 16px;
+        font-size: 0.9rem;
+      }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .hero-copy,
+      .hero-media { min-height: 360px; }
+
+      .hero-caption {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .cta-box {
+        padding: 24px;
+      }
+
+      .work-grid {
+        gap: 16px;
+      }
+
+      .project-visual {
+        height: 180px;
+      }
+
+      .button {
+        min-height: 40px;
+        padding: 0 16px;
+        font-size: 0.9rem;
+      }
+
+      .statement {
+        padding: 40px 0;
+      }
+
+      .statement-box h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Lucy Gray R home">
+        <span class="brand-title">Lucy Gray R</span>
+        <span class="brand-sub">Creative AI Studio</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://instagram.com/lucygrayr" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Work-first portfolio</div>
+          <h1>Cinematic AI visuals for artists, brands, and live moments.</h1>
+          <p>
+            Lucy Gray R is a creative AI studio building commercials, music video concepts,
+            promo films, and motion-led visual worlds with a cinematic point of view.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work">View Work</a>
+            <a class="button" href="#contact">Start a Project</a>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <div class="hero-overlay"></div>
+          <div class="hero-caption">
+            <div>
+              <strong>Lucy Demo Reel</strong>
+              <span>Commercials, music videos, promo films</span>
+            </div>
+            <div class="play-badge"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Selected Work</h2>
+          </div>
+          <p>
+            Premium portfolio grid showcasing cinematic visuals, commercials, and creative direction.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <article class="project-card span-7">
+            <div class="project-visual">🎬</div>
+            <div class="project-content">
+              <span class="project-meta">Featured Reel</span>
+              <h3>Lucy Demo Reel</h3>
+              <p>Commercials, music videos, and promo films with a cinematic AI direction.</p>
+            </div>
+          </article>
+
+          <article class="project-card span-5">
+            <div class="project-visual">🎵</div>
+            <div class="project-content">
+              <span class="project-meta">Spec Concept</span>
+              <h3>The Sound of Sarantuya</h3>
+              <p>A concert promo concept exploring voice, memory, stage presence, and emotional return.</p>
+            </div>
+          </article>
+
+          <article class="project-card span-4">
+            <div class="project-visual">🎼</div>
+            <div class="project-content">
+              <span class="project-meta">Music Visual</span>
+              <h3>Choyjoo — Visual Mood Film</h3>
+              <p>AI-driven mood, texture, atmosphere, and contemporary music storytelling.</p>
+            </div>
+          </article>
+
+          <article class="project-card span-4">
+            <div class="project-visual">📽️</div>
+            <div class="project-content">
+              <span class="project-meta">Short-form</span>
+              <h3>Motion Poster Series</h3>
+              <p>Poster-led concepts for artists, events, campaigns, and stage-driven visuals.</p>
+            </div>
+          </article>
+
+          <article class="project-card span-4">
+            <div class="project-visual">🎨</div>
+            <div class="project-content">
+              <span class="project-meta">Campaign Study</span>
+              <h3>Campaign AI Imagery</h3>
+              <p>Stylized visual systems for launches, brand storytelling, and paid creative assets.</p>
+            </div>
+          </article>
+
+          <article class="project-card span-8">
+            <div class="project-visual">✨</div>
+            <div class="project-content">
+              <span class="project-meta">Commercial Direction</span>
+              <h3>Product Storytelling Test</h3>
+              <p>Spec commercial frames blending premium lighting, mood, and product-led visual narrative.</p>
+            </div>
+          </article>
+
+          <article class="project-card span-4">
+            <div class="project-visual">🌌</div>
+            <div class="project-content">
+              <span class="project-meta">Mood Work</span>
+              <h3>Organic Moodboard</h3>
+              <p>Direction-first visual studies for brands that want atmosphere, texture, and emotional clarity.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement Section -->
+    <section class="statement">
+      <div class="container statement-box">
+        <h2>AI is the tool. Direction is the difference.</h2>
+        <p>
+          Lucy Gray R creates commercials, music video concepts, promo films, and visual worlds that feel cinematic, modern, and emotionally sharp. We prioritize creative direction and visual storytelling above all else.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>About</h2>
+          </div>
+          <p>A creative studio focused on cinematic visuals and strategic direction.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="panel">
+            <h3>Studio</h3>
+            <p>
+              Lucy Gray R is a creative AI studio based in Ulaanbaatar. We craft cinematic visuals for artists, brands, and live moments — from commercial concepts and music video worlds to promo films and motion-led storytelling.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>Capabilities</h3>
+            <ul class="capabilities">
+              <li>Commercial concepts</li>
+              <li>Music video visuals</li>
+              <li>Concert and event promos</li>
+              <li>Motion posters</li>
+              <li>Campaign imagery</li>
+              <li>Visual direction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact-cta">
+      <div class="container cta-box">
+        <div>
+          <h2>Have a project in mind?</h2>
+          <p>Let's build something unforgettable together.</p>
+        </div>
+        <a class="button primary" href="#contact">Start a Project</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+          </div>
+          <p>For artist visuals, campaigns, promo films, and creative collaborations.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="panel">
+            <h3>Get in touch</h3>
+            <p>Email: <a href="mailto:hello@lucygrayr.com">hello@lucygrayr.com</a></p>
+            <p>Instagram: <a href="https://instagram.com/lucygrayr" target="_blank" rel="noopener">@lucygrayr</a></p>
+            <p>Location: Ulaanbaatar, Mongolia</p>
+            <p class="contact-note">
+              Ready for your next cinematic visual project. Let's create something extraordinary.
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>Project Inquiry</h3>
+            <form id="contactForm">
+              <div class="form-status" id="formStatus"></div>
+              <div class="field">
+                <label for="name">Name *</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="organization">Brand / Artist / Event</label>
+                <input id="organization" name="organization" type="text" placeholder="Who is this for?" />
+              </div>
+              <div class="field">
+                <label for="email">Email *</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="Tell me about the project" required></textarea>
+              </div>
+              <button class="button primary" type="submit" id="submitBtn">Send Inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© 2026 Lucy Gray R. Creative AI Studio based in Ulaanbaatar.</span>
+      <div class="footer-links">
+        <a href="https://instagram.com/lucygrayr" target="_blank" rel="noopener">Instagram</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form handling with email service support
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = {
+        name: document.getElementById('name').value,
+        organization: document.getElementById('organization').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+      };
+
+      // Disable button during submission
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        // Option 1: Using Formspree (no backend needed)
+        const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          formStatus.className = 'form-status success';
+          formStatus.textContent = '✓ Thank you! I\'ll get back to you soon.';
+          contactForm.reset();
+          submitBtn.textContent = 'Send Inquiry';
+        } else {
+          throw new Error('Failed to send');
+        }
+      } catch (error) {
+        // Fallback: Show mailto link if Formspree not configured
+        console.warn('Email service not configured. Using mailto fallback.');
+        const mailtoBody = `Name: ${formData.name}\nOrganization: ${formData.organization}\n\n${formData.message}`;
+        window.location.href = `mailto:hello@lucygrayr.com?subject=Project Inquiry&body=${encodeURIComponent(mailtoBody)}`;
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Inquiry';
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#top' && href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // Add animation to elements on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px',
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 0.6s ease both';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.project-card, .panel').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "lucygrayr-portfolio",
+  "version": "1.0.0",
+  "description": "Lucy Gray R - Creative AI Studio Portfolio. Cinematic visuals for artists, brands, and live moments.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "portfolio",
+    "creative",
+    "ai",
+    "studio",
+    "cinematic",
+    "visuals"
+  ],
+  "author": "Lucy Gray R",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucygrayr/portfolio"
+  }
+}
